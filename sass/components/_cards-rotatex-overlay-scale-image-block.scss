@@ -1,0 +1,11 @@
+.cards-rotatex-overlay-scale-image-block
+{
+    
+    @include set-width-height(100%,$height-cards-rotatex-overlay-scale-image-block);
+    &__elements
+    {
+        @include set-width-height(100%,$height-cards-rotatex-overlay-scale-image-block);
+        @include set-display-value-and-direction(flex,row);
+        justify-content: center;
+    }
+}

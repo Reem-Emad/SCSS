@@ -1,0 +1,109 @@
+.card-rotatex-overlay-scale-image__element
+{
+   
+    @include set-width-height($width-card-rotatex-overlay-scale-image,$height-card-rotatex-overlay-scale-image);
+     margin:20px;
+     position: relative;
+  
+     .image-block
+     {
+        
+       
+         @include set-width-height($width-card-rotatex-overlay-scale-image,$height-card-rotatex-overlay-scale-image-image);
+         overflow: hidden;
+         .picture
+         {
+             position: absolute;
+             transition: all 0.5s;
+         }
+
+        .overlay
+        {
+            position: absolute;
+           
+            @include set-width-height($width-card-rotatex-overlay-scale-image,$height-card-rotatex-overlay-scale-image-image);
+            background-color: rgba(141, 181, 62, 0.603);
+          //  display: flex;
+            @include set-display-value-and-direction(flex,row);
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color:white;
+            opacity: 0;
+             transition: all 0.5s;
+       transform-origin: top;
+       transform: rotateX(-90deg);
+            :hover
+            {
+                color:$color-primary;
+            }
+
+        }
+     }
+     &:hover
+     {
+         .overlay
+         {
+             opacity: 1;
+             transform: perspective(400px) rotateX(0deg); 
+         }
+         .picture
+         {
+             transform: scale(1.2,1.2);
+         }
+     }
+
+     .card-block
+     {
+
+         @include set-display-value-and-direction(flex,row);
+            @include set-width-height($width-card-rotatex-overlay-scale-image,$height-card-rotatex-overlay-scale-image-image);
+         .date
+         {
+            margin:2rem 2rem 0rem 0rem;
+            @include set-width-height(4rem,7rem);
+             font-size:3rem;
+             font-weight: bold;
+             @include set-display-value-and-direction(flex,column);
+             text-align: center;
+             span
+               {
+                font-size:2rem;
+               
+               }
+        }
+        .text
+        {
+          
+            @include set-width-height($width-card-rotatex-overlay-scale-image,$height-card-rotatex-overlay-scale-image-image);
+            margin-top:2rem;
+            .title
+            {
+                    margin-bottom: 1.2rem;
+            span
+            {
+                color: $color-primary;
+            }
+            }
+            p
+            {
+             margin-bottom: 2rem;
+            }
+            .lines
+            {
+                align-items: unset;
+                margin-top:2rem;
+                padding:1rem 0px;
+            }
+            .link
+            {
+                color: $color-graydark1;
+                text-decoration: underline;
+                font-weight: bold;
+                &:hover{
+               color: $color-primary;
+                }
+            }
+        }
+     }
+}

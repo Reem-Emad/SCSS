@@ -1,0 +1,90 @@
+.card-with-progress-bar
+{
+        @include set-width-height($width-card-with-progress-bar,$height-card-with-progress-bar);
+         margin:2rem;
+         text-align: center;
+         &:hover
+         {
+             .lines__first
+            {
+             width:$first-line-width-afterhover;
+             transition: .7s cubic-bezier(0.34, -0.13, 0.34, 1.1);
+            }
+            .overlay  //al overlay aly t7tha
+            { 
+                    opacity: 1;
+                    transform: translateY($height-card-with-progress-bar-image);
+            }
+         }
+         
+         &__image
+         {
+            // width: 36rem;
+            // height:28rem;
+            @include set-width-height($width-card-with-progress-bar,$height-card-with-progress-bar-image);
+            position: relative;
+            overflow: hidden;
+            &:hover
+            {
+                .overlay  //al overlay aly t7tha
+                {
+                    
+                        opacity: 1;
+                        transform: translateY($height-card-with-progress-bar-image);
+                    
+    
+                }
+            }
+            .overlay
+            {
+             
+                @include set-width-height($width-card-with-progress-bar,$height-card-with-progress-bar-image);
+                top: -28rem;
+                position: absolute; //to appear on the top of the background
+                background: rgba(148, 193, 61, 0.8);
+                transition: .7s cubic-bezier(0.34, -0.13, 0.34, 1.1);
+                opacity: 0;
+                &:hover{
+                    opacity: 1;
+                    transform: translateY($height-card-with-progress-bar-image);
+                    
+                }
+             
+            }
+
+         }
+
+         &__lower-content
+         {
+            height:38rem;
+              h5
+              {
+                  margin-top:3rem;
+              }
+              h2
+              {
+                margin-top:1rem;
+              }
+              .lines
+              {
+                margin-top:2rem;
+                padding:1rem;
+              }
+              .progress-level
+              {
+                margin-top:3.5rem;
+              }
+             .after-progress-level
+             {
+                margin-top:1rem;
+                    @include set-display-value-and-direction(flex,row);
+                   justify-content: space-between;
+                   font-weight: bold;
+                
+             }
+             .button
+             {
+                margin-top:4rem;
+             }
+         }
+}

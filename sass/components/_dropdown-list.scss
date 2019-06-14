@@ -1,0 +1,44 @@
+.dropdown
+{
+    transition: all 5s ease-in-out;
+    padding-top:$padding-top-dropdown;
+   
+
+
+.dropdown-content
+ {
+    display: none; //to be hidden
+    position: absolute; //to control it's width
+    background-color:$color-primary;
+    min-width: $drop-down-width;
+    padding: $padding-dropdown;
+    position:absolute;
+    top:$top-dropdown-content;
+    z-index: 1px;
+   
+    a {
+        
+        color:$color-white;
+        padding: $padding-smallvalue;
+        display: block;
+        font-weight: bold;
+        //margin:$margin-smallvalue 0px;
+      
+        &:hover 
+        {
+            transition: all 0.3s linear;
+            @include set-colors($color-white,$color-primary,$color-primary);
+                 
+           padding-left:$padding-contents-left;
+        
+
+        }
+    }
+}
+}
+.dropdown:hover .dropdown-content
+{
+   
+    display: block;
+    
+}

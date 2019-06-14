@@ -1,0 +1,16 @@
+.cards-with-progress-bar-block
+{
+    
+    
+   @include set-width-height(100%,83.4rem);
+   margin-bottom: 10rem;
+    .cards
+    {
+    
+      @include set-display-value-and-direction(flex,row);
+      justify-content: center;
+      margin:auto;
+       
+    }
+   
+}

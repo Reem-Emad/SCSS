@@ -1,0 +1,66 @@
+.image-block
+{
+    position:relative;
+    height:80rem;
+     .background
+     {
+     background-image:linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.322)), url("../images/image-1.jpg");
+    background-size: cover;
+    @include set-width-height(100%,60rem);
+    top:12rem;
+    position: absolute;
+    
+    }
+      
+    
+    .image-button
+    {   
+    
+        
+        @include element-position(absolute,$right-button-position,$top-button-position);
+    }
+    .arrow-button
+    {
+      
+        display: none;
+        
+        .right-arrow
+        {
+
+           
+            @include element-position(absolute,$left-right-arrow-position,$top-arrows-position);
+           
+        }
+        .left-arrow
+        {
+           
+            @include element-position(absolute,$left-left-arrow-position,$top-arrows-position);
+            width:4rem;
+        }
+       
+    }
+    &:hover
+    {
+      
+        .arrow-button
+        {
+     
+         display: block;
+         transition: .7s cubic-bezier(0.34, -0.13, 0.34, 1.1);
+        }
+    }
+    .image-text
+    {
+       
+        @include element-position(absolute,$left-text-position,$top-text-position);
+        @include font-specification($large-font-size,bold,$color-white);
+        text-align:center;
+    
+    
+    &__text1, &__text2
+    { 
+        @include font-specification($small-font-size,bold,$color-white);
+    }
+   }
+   
+}

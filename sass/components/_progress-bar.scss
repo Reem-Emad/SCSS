@@ -1,0 +1,44 @@
+.progress-level
+{
+   
+    @include set-display-value-and-direction(flex,column);
+    
+   .percent
+   {
+   
+       @include set-width-height($percent-width-height,$percent-width-height);
+       text-align: center;
+       .value
+       {
+           font-weight: bold;
+       }
+       .fas,.fa-caret-down
+       {
+        color:#CCCCCC
+       }
+   }
+   .bar
+   {
+   
+    @include set-width-height($bar-width,$bar-height);
+    position: relative;
+    margin-top:15px;
+   .outer-bar
+   {
+    position: absolute;
+       @include set-width-height($bar-width,$bar-height);
+       background-color: #EEEEEE;
+       border:1px solid #EEEEEE;
+       border-radius: 35px;
+   }
+   .inner-bar
+   {
+    position: absolute;
+    height:$bar-height;
+    background-color: $color-primary;
+    border:1px solid $color-primary;
+    border-radius: 3.5rem;
+
+   }
+   }
+}

@@ -1,0 +1,22 @@
+.cards-services-down-shadow-block
+{
+  display: inline-flex;
+  margin-bottom: 10rem;
+   @include set-width-height(100%,35rem);
+    .cards
+    {
+       display: inline-flex;
+       margin:auto;
+    }
+   .card-services-down-shadow
+   {
+       margin: 2rem;
+       &:hover
+       {
+        margin-top:1.2rem;
+    
+       }
+   }
+
+
+}

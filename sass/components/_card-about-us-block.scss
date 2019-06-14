@@ -1,0 +1,56 @@
+.card-about-us-block
+{
+    
+
+    width:100%;
+    height:$height-card-about-us;
+    margin-bottom: 10rem;
+    &-contents
+    {
+        @include set-display-value-and-direction(flex,row);
+        width:100%;
+        height:$height-card-about-us;
+        &__pictures-block
+        {
+          
+            @include set-display-value-and-direction(flex,row);
+            position: relative;
+            height:$height-card-about-us;
+            width:$pictures-block-width;
+            .pictures-block__big-picture
+            {
+    
+          
+            @include set-width-height( $big-picture-width,$big-picture-height);
+            background-image: url("../images/about.jpg");
+            }
+           .pictures-block__small-picture
+           {
+             position: absolute;
+            
+           
+               @include set-width-height( $small-picture-width,$small-picture-height);
+               background-image: url("../images/about-small.jpg");           
+               border: 10px solid #fff;
+
+               left:$small-picture-left;
+               bottom: 0px;
+
+           }
+        }
+        &__text-block
+        {
+            // height:$height-card-about-us;
+            // width:$text-block-width;
+            @include set-width-height( $text-block-width,$height-card-about-us);
+            h1
+            {
+                span
+                {
+                color:$color-primary;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+.section-title
+{
+   
+    @include set-display-value-and-direction(flex,column);
+    text-align: center;
+    width:100%;
+    .section-title-image
+    {
+        margin-bottom: $margin-between-elements;
+    }
+    h1
+    {
+        margin-bottom: $margin-between-elements;
+    
+    span
+    {
+        color: $color-primary;
+    } 
+    }
+}

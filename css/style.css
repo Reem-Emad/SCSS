@@ -1,0 +1,554 @@
+/*if i put the selector name as a string in a variable and want to use it*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,700");
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-family: Roboto, sans-serif; }
+
+a {
+  text-decoration: none; }
+
+.btn {
+  text-transform: uppercase;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  font-weight: 700;
+  transition: all .2s ease-in-out; }
+  .btn--rounded {
+    padding-right: 4rem;
+    padding-left: 4rem;
+    border: 2px solid;
+    border-radius: 3rem; }
+  .btn--rectangle {
+    padding-right: 1.1rem;
+    padding-left: 1.1rem; }
+  .btn--circle {
+    padding-right: 1.1rem;
+    padding-left: 1.1rem;
+    border-radius: 50%; }
+  .btn--shadow {
+    box-shadow: 0px 0px 30px #e0dfdf; }
+  .btn--white {
+    background-color: white;
+    color: #222222;
+    border-color: white; }
+    .btn--white:hover {
+      color: #94C13D; }
+  .btn--primary {
+    background-color: #94C13D;
+    color: white;
+    border-color: #94C13D; }
+  .btn--white-rounded {
+    background-color: white;
+    color: #222222;
+    border-color: #222222; }
+    .btn--white-rounded:hover {
+      background-color: #94C13D;
+      color: white;
+      border-color: #94C13D; }
+  .btn--primary-rounded {
+    background-color: #94C13D;
+    color: white;
+    border-color: #94C13D; }
+    .btn--primary-rounded:hover {
+      background-color: #222222;
+      color: white;
+      border-color: #222222; }
+  .btn--darkgray {
+    background-color: #22222273;
+    color: white;
+    border-color: #22222273; }
+    .btn--darkgray:hover {
+      background-color: #22222273;
+      color: #94C13D;
+      border-color: #22222273; }
+
+.dropdown {
+  transition: all 5s ease-in-out;
+  padding-top: 1.1rem; }
+  .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #94C13D;
+    min-width: 21rem;
+    padding: 2.5rem;
+    position: absolute;
+    top: 119px;
+    z-index: 1px; }
+    .dropdown .dropdown-content a {
+      color: white;
+      padding: 1.1rem;
+      display: block;
+      font-weight: bold; }
+      .dropdown .dropdown-content a:hover {
+        transition: all 0.3s linear;
+        background-color: white;
+        color: #94C13D;
+        border-color: #94C13D;
+        padding-left: 3rem; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+.card-services-down-shadow {
+  width: 25rem;
+  height: 30rem;
+  border-bottom: 3px solid #94C13D;
+  box-shadow: 0px 0px 30px #e0dfdf; }
+  .card-services-down-shadow:hover .lines__first {
+    width: 6rem;
+    transition: 0.7s cubic-bezier(0.34, -0.13, 0.34, 1.1); }
+  .card-services-down-shadow:hover .card-services-down-shadow-contents:before {
+    opacity: 1; }
+  .card-services-down-shadow-contents {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    position: relative; }
+    .card-services-down-shadow-contents:before {
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      content: '';
+      top: 94%;
+      left: 5%;
+      width: 90%;
+      height: 1rem;
+      opacity: 0;
+      background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: transform, opacity;
+      transition-property: transform, opacity; }
+    .card-services-down-shadow-contents__icon {
+      font-size: 5rem;
+      margin-bottom: 2rem; }
+    .card-services-down-shadow-contents__button {
+      font-size: 1.5rem;
+      margin-bottom: 2rem; }
+    .card-services-down-shadow-contents__line {
+      margin-bottom: 2rem; }
+    .card-services-down-shadow-contents__text {
+      margin-bottom: 2rem; }
+    .card-services-down-shadow-contents__circle-button {
+      margin-top: 6.1rem; }
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .lines__first {
+    width: 1.5rem;
+    border-bottom: 2px solid #94C13D; }
+  .lines__second {
+    width: 3rem;
+    margin-top: 0.2rem;
+    border-bottom: 2px solid #94C13D; }
+
+.card-with-progress-bar {
+  width: 36rem;
+  height: 69rem;
+  margin: 2rem;
+  text-align: center; }
+  .card-with-progress-bar:hover .lines__first {
+    width: 6rem;
+    transition: 0.7s cubic-bezier(0.34, -0.13, 0.34, 1.1); }
+  .card-with-progress-bar:hover .overlay {
+    opacity: 1;
+    transform: translateY(28rem); }
+  .card-with-progress-bar__image {
+    width: 36rem;
+    height: 28rem;
+    position: relative;
+    overflow: hidden; }
+    .card-with-progress-bar__image:hover .overlay {
+      opacity: 1;
+      transform: translateY(28rem); }
+    .card-with-progress-bar__image .overlay {
+      width: 36rem;
+      height: 28rem;
+      top: -28rem;
+      position: absolute;
+      background: rgba(148, 193, 61, 0.8);
+      transition: 0.7s cubic-bezier(0.34, -0.13, 0.34, 1.1);
+      opacity: 0; }
+      .card-with-progress-bar__image .overlay:hover {
+        opacity: 1;
+        transform: translateY(28rem); }
+  .card-with-progress-bar__lower-content {
+    height: 38rem; }
+    .card-with-progress-bar__lower-content h5 {
+      margin-top: 3rem; }
+    .card-with-progress-bar__lower-content h2 {
+      margin-top: 1rem; }
+    .card-with-progress-bar__lower-content .lines {
+      margin-top: 2rem;
+      padding: 1rem; }
+    .card-with-progress-bar__lower-content .progress-level {
+      margin-top: 3.5rem; }
+    .card-with-progress-bar__lower-content .after-progress-level {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-weight: bold; }
+    .card-with-progress-bar__lower-content .button {
+      margin-top: 4rem; }
+
+.progress-level {
+  display: flex;
+  flex-direction: column; }
+  .progress-level .percent {
+    width: 2.8rem;
+    height: 2.8rem;
+    text-align: center; }
+    .progress-level .percent .value {
+      font-weight: bold; }
+    .progress-level .percent .fas, .progress-level .percent .fa-caret-down {
+      color: #CCCCCC; }
+  .progress-level .bar {
+    width: 36rem;
+    height: 1rem;
+    position: relative;
+    margin-top: 15px; }
+    .progress-level .bar .outer-bar {
+      position: absolute;
+      width: 36rem;
+      height: 1rem;
+      background-color: #EEEEEE;
+      border: 1px solid #EEEEEE;
+      border-radius: 35px; }
+    .progress-level .bar .inner-bar {
+      position: absolute;
+      height: 1rem;
+      background-color: #94C13D;
+      border: 1px solid #94C13D;
+      border-radius: 3.5rem; }
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%; }
+  .section-title .section-title-image {
+    margin-bottom: 1.5rem; }
+  .section-title h1 {
+    margin-bottom: 1.5rem; }
+    .section-title h1 span {
+      color: #94C13D; }
+
+.background-image-fixed-attachment-block-element {
+  display: flex;
+  flex-direction: row;
+  margin: 90px 50px 50px; }
+  .background-image-fixed-attachment-block-element .icon {
+    margin: 1rem;
+    font-size: 6rem;
+    color: white; }
+  .background-image-fixed-attachment-block-element .data .number {
+    font-size: 5rem;
+    color: white; }
+  .background-image-fixed-attachment-block-element .data .text {
+    color: #94C13D;
+    font-weight: bold; }
+
+.background-image-fixed-attachment-block {
+  width: 100%;
+  height: 25rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url("../images/1.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  margin-bottom: 10rem; }
+  .background-image-fixed-attachment-block__contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+
+.card-with-rotatex-overlay {
+  position: relative;
+  width: 30rem;
+  height: 26rem;
+  margin: 0.5rem;
+  box-shadow: 0px 0px 30px #e0dfdf; }
+  .card-with-rotatex-overlay__contents {
+    position: absolute;
+    width: 30rem;
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white; }
+    .card-with-rotatex-overlay__contents .lines {
+      padding: 1rem; }
+    .card-with-rotatex-overlay__contents .icon {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+      margin-top: 7.5rem; }
+  .card-with-rotatex-overlay .overlay {
+    transition: all 0.5s;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    position: absolute;
+    width: 30rem;
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #94C13D;
+    opacity: 0; }
+    .card-with-rotatex-overlay .overlay__content {
+      position: relative;
+      width: 100%;
+      height: 100%; }
+    .card-with-rotatex-overlay .overlay p {
+      margin-top: 7.5rem;
+      margin-bottom: 2rem;
+      margin-left: 2.5rem;
+      width: 25rem;
+      color: white;
+      text-align: center; }
+    .card-with-rotatex-overlay .overlay h3 {
+      color: white; }
+    .card-with-rotatex-overlay .overlay .lines {
+      padding: 1rem; }
+      .card-with-rotatex-overlay .overlay .lines__first {
+        border-color: white; }
+      .card-with-rotatex-overlay .overlay .lines__second {
+        border-color: white; }
+    .card-with-rotatex-overlay .overlay-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: rgba(255, 255, 255, 0.233);
+      font-size: 10rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+  .card-with-rotatex-overlay:hover .overlay {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg); }
+
+.cards-with-rotatex-overlay-block {
+  width: 100%;
+  height: 94rem;
+  background-image: url("E:/ITI/html&css/project css&html&SASS/images/2.jpg");
+  background-position: center left;
+  background-repeat: no-repeat;
+  margin-bottom: 10rem; }
+  .cards-with-rotatex-overlay-block__elements {
+    width: 93rem;
+    height: 54rem;
+    margin-left: 4.3rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .cards-with-rotatex-overlay-block > .section-title {
+    margin-top: 2rem; }
+
+.card-rotatex-overlay-scale-image__element {
+  width: 36rem;
+  height: 57rem;
+  margin: 20px;
+  position: relative; }
+  .card-rotatex-overlay-scale-image__element .image-block {
+    width: 36rem;
+    height: 28rem;
+    overflow: hidden; }
+    .card-rotatex-overlay-scale-image__element .image-block .picture {
+      position: absolute;
+      transition: all 0.5s; }
+    .card-rotatex-overlay-scale-image__element .image-block .overlay {
+      position: absolute;
+      width: 36rem;
+      height: 28rem;
+      background-color: rgba(141, 181, 62, 0.603);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      color: white;
+      opacity: 0;
+      transition: all 0.5s;
+      transform-origin: top;
+      transform: rotateX(-90deg); }
+      .card-rotatex-overlay-scale-image__element .image-block .overlay :hover {
+        color: #94C13D; }
+  .card-rotatex-overlay-scale-image__element:hover .overlay {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg); }
+  .card-rotatex-overlay-scale-image__element:hover .picture {
+    transform: scale(1.2, 1.2); }
+  .card-rotatex-overlay-scale-image__element .card-block {
+    display: flex;
+    flex-direction: row;
+    width: 36rem;
+    height: 28rem; }
+    .card-rotatex-overlay-scale-image__element .card-block .date {
+      margin: 2rem 2rem 0rem 0rem;
+      width: 4rem;
+      height: 7rem;
+      font-size: 3rem;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+      .card-rotatex-overlay-scale-image__element .card-block .date span {
+        font-size: 2rem; }
+    .card-rotatex-overlay-scale-image__element .card-block .text {
+      width: 36rem;
+      height: 28rem;
+      margin-top: 2rem; }
+      .card-rotatex-overlay-scale-image__element .card-block .text .title {
+        margin-bottom: 1.2rem; }
+        .card-rotatex-overlay-scale-image__element .card-block .text .title span {
+          color: #94C13D; }
+      .card-rotatex-overlay-scale-image__element .card-block .text p {
+        margin-bottom: 2rem; }
+      .card-rotatex-overlay-scale-image__element .card-block .text .lines {
+        align-items: unset;
+        margin-top: 2rem;
+        padding: 1rem 0px; }
+      .card-rotatex-overlay-scale-image__element .card-block .text .link {
+        color: #222222;
+        text-decoration: underline;
+        font-weight: bold; }
+        .card-rotatex-overlay-scale-image__element .card-block .text .link:hover {
+          color: #94C13D; }
+
+.cards-rotatex-overlay-scale-image-block {
+  width: 100%;
+  height: 74rem; }
+  .cards-rotatex-overlay-scale-image-block__elements {
+    width: 100%;
+    height: 74rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+
+.header {
+  background-color: white;
+  display: inline-flex;
+  position: fixed;
+  z-index: 1;
+  width: 100%; }
+  .header .logo {
+    margin: 4.2rem 1rem 2rem 15.7rem; }
+  .header .header-contents {
+    margin: 5rem 3rem 0px 6rem;
+    font-size: 1.7rem;
+    display: inline-flex; }
+  .header .search-icon {
+    margin: 6rem 1rem 4rem 1rem; }
+  .header .header-button {
+    margin: 6rem 2rem 4rem 2rem; }
+
+.image-block {
+  position: relative;
+  height: 80rem; }
+  .image-block .background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.322)), url("../images/image-1.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 60rem;
+    top: 12rem;
+    position: absolute; }
+  .image-block .image-button {
+    position: absolute;
+    right: 56rem;
+    top: 60rem; }
+  .image-block .arrow-button {
+    display: none; }
+    .image-block .arrow-button .right-arrow {
+      position: absolute;
+      right: 5rem;
+      top: 30rem; }
+    .image-block .arrow-button .left-arrow {
+      position: absolute;
+      right: 125rem;
+      top: 30rem;
+      width: 4rem; }
+  .image-block:hover .arrow-button {
+    display: block;
+    transition: 0.7s cubic-bezier(0.34, -0.13, 0.34, 1.1); }
+  .image-block .image-text {
+    position: absolute;
+    right: 15rem;
+    top: 40rem;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center; }
+    .image-block .image-text__text1, .image-block .image-text__text2 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: white; }
+
+.cards-services-down-shadow-block {
+  display: inline-flex;
+  margin-bottom: 10rem;
+  width: 100%;
+  height: 35rem; }
+  .cards-services-down-shadow-block .cards {
+    display: inline-flex;
+    margin: auto; }
+  .cards-services-down-shadow-block .card-services-down-shadow {
+    margin: 2rem; }
+    .cards-services-down-shadow-block .card-services-down-shadow:hover {
+      margin-top: 1.2rem; }
+
+.card-about-us-block {
+  width: 100%;
+  height: 45rem;
+  margin-bottom: 10rem; }
+  .card-about-us-block-contents {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 45rem; }
+    .card-about-us-block-contents__pictures-block {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      height: 45rem;
+      width: 83.3rem; }
+      .card-about-us-block-contents__pictures-block .pictures-block__big-picture {
+        width: 67.3rem;
+        height: 40rem;
+        background-image: url("../images/about.jpg"); }
+      .card-about-us-block-contents__pictures-block .pictures-block__small-picture {
+        position: absolute;
+        width: 30rem;
+        height: 27.8rem;
+        background-image: url("../images/about-small.jpg");
+        border: 10px solid #fff;
+        left: 41.3rem;
+        bottom: 0px; }
+    .card-about-us-block-contents__text-block {
+      width: 64rem;
+      height: 45rem; }
+      .card-about-us-block-contents__text-block h1 span {
+        color: #94C13D; }
+
+.cards-with-progress-bar-block {
+  width: 100%;
+  height: 83.4rem;
+  margin-bottom: 10rem; }
+  .cards-with-progress-bar-block .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto; }

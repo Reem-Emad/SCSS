@@ -1,0 +1,21 @@
+.lines
+{
+    
+    @include set-display-value-and-direction(flex,column);
+    align-items: center;
+
+    &__first
+    {
+       width:$first-line-width;
+       border-bottom: 2px solid $color-primary;
+
+    }
+    
+    &__second
+    {
+
+        width:$second-line-width;
+        margin-top:$margin-between-lines;
+        border-bottom: 2px solid $color-primary;
+    }
+}

@@ -1,0 +1,25 @@
+.cards-with-rotatex-overlay-block
+{
+    @include set-width-height(100%,94rem); 
+    background-image: url("E:/ITI/html&css/project css&html&SASS/images/2.jpg");
+    background-position: center left;
+    background-repeat: no-repeat;
+    margin-bottom: 10rem;
+     
+    &__elements
+    {
+    
+    @include set-width-height(93rem,54rem);
+    margin-left: 4.3rem;
+    margin-top: 5rem;
+   // display: flex;
+    @include set-display-value-and-direction(flex,row);
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+    & > .section-title
+    {
+        margin-top: 2rem;
+    }
+}

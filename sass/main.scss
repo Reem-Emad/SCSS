@@ -1,0 +1,71 @@
+//$primary-color:blue;
+/*if i put the selector name as a string in a variable and want to use it*/
+//$test:'calss-selector';
+
+//.#{&test}
+//{
+//  color: bisque;
+//}
+
+//to write functions
+//mixins are used to put a block of code that i want to repeat it
+//extent means take from an object its properties (inheritance)
+//loops
+
+//div
+//{
+//     background-color: $primary-color;
+//     width: 50px;
+//     height: 50px;
+
+    
+
+//     span /*span that is inside the div*/
+//     {
+//         color: yellow;
+//     }
+
+//     &:hover //to make the hover over the divs
+//     {
+//         color: aqua;
+//     }
+// }
+
+//font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+
+@import'abstracts/functions';
+@import'abstracts/mixins';
+@import'abstracts/variables';
+
+@import'base/animations';
+@import'base/base';
+@import'base/typography';
+@import'base/utilities';
+
+@import'components/_buttons';
+@import'components/_dropdown-list';
+@import'components/_card-services-down-shadow';
+@import'components/_lines';
+@import'components/_card-with-progress-bar';
+@import'components/_progress-bar';
+@import'components/_section-title';
+@import'components/_background-image-fixed-attachment-block-element';
+@import'components/_background-image-fixed-attachment-block';
+@import'components/_card-with-rotatex-overlay';
+@import'components/_cards-with-rotatex-overlay-block';
+@import'components/_card-rotatex-overlay-scale-image';
+@import'components/_cards-rotatex-overlay-scale-image-block';
+
+
+@import'layout/header';
+@import'layout/imageblock';
+@import'components/_cards-services-down-shadow-block';
+@import'components/_card-about-us-block';
+@import'components/_cards-with-progress-bar-block';
+
+
+
+
+
+

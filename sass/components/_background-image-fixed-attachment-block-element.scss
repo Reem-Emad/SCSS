@@ -1,0 +1,25 @@
+.background-image-fixed-attachment-block-element
+{
+    @include set-display-value-and-direction(flex,row);
+    margin:90px 50px 50px;
+    .icon
+    {
+        margin: $margin-icon;
+        font-size: $font-size-icon;
+        color:$color-white;
+    }
+    .data
+    {
+      
+        .number
+        {
+            font-size: $font-size-number;
+           color:$color-white;
+        }
+        .text
+        {
+            color:$color-primary;
+            font-weight: bold;
+        }
+    }
+}

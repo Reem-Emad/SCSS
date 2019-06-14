@@ -1,0 +1,39 @@
+//buttons
+@mixin set-colors($background-color,$font-color,$border-color)
+{
+    background-color:$background-color;
+    color: $font-color;
+    border-color:$border-color; 
+}
+
+@mixin box-shadow($offset-x,$offset-y,$blur,$shadow-color)
+{
+    box-shadow: $offset-x $offset-y $blur $shadow-color;
+}
+
+//image block
+@mixin element-position($element-position,$element-right,$element-top)
+{
+    position: $element-position;
+    right: $element-right;
+    top: $element-top;
+
+}
+@mixin font-specification($font-size,$font-weight,$font-color) 
+{
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color:$font-color;    
+}
+
+@mixin set-width-height($width-value,$height-value)
+{
+    width:$width-value;
+    height:$height-value;
+}
+
+@mixin set-display-value-and-direction($display-value,$direction-value)
+{
+    display: $display-value;
+    flex-direction: $direction-value;
+}

@@ -1,0 +1,40 @@
+
+.header
+{
+      background-color: $color-white;
+      display: inline-flex; //to make all divs in front of each others
+    //   justify-content: center;
+    //   align-content: center;
+      position: fixed; //to down with me while scrolling
+      z-index: 1;
+      width:100%;
+  
+     // margin-top:3.5rem;
+    //  border-bottom:1px solid $color-graydark2;
+    .logo
+    {
+      //   margin:1rem;
+        margin: $logo-margin-top $logo-margin-left $logo-margin-bottom $logo-margin-right;
+    }
+    .header-contents
+    {
+      margin: $header-contents-margin-top $header-contents-margin-left 0px $header-contents-margin-right;
+    // margin:1rem 1rem 0px 1rem;   
+     font-size:1.7rem;
+        display: inline-flex;
+    }
+    .search-icon
+    {
+        //margin:2rem;
+       margin: $search-icon-margin-top $search-icon-margin-LeftandRight $search-icon-margin-bottom $search-icon-margin-LeftandRight;
+
+    }
+    .header-button
+    {
+     //   margin:2rem;
+      margin: $search-icon-margin-top $logo-margin-bottom $search-icon-margin-bottom $logo-margin-bottom; 
+         
+    }
+    
+    
+}

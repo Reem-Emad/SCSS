@@ -1,0 +1,20 @@
+.background-image-fixed-attachment-block
+{
+  
+    @include set-width-height(100%, $counter-section-height);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)),url("../images/1.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 10rem;
+     &__contents
+     {
+        
+        @include set-display-value-and-direction(flex,row);
+        justify-content: center;
+     }
+    
+    
+     
+    
+    
+}
